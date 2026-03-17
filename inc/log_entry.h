@@ -4,22 +4,34 @@
 
 #include <string>
 
+/// @brief ログ1件分のクラス
 class LogEntry {
   public:
+    /// @brief コンストラクタ
+    /// @param date_time 時刻
+    /// @param level ログレベル
+    /// @param message ログメッセージ
     LogEntry(const DateTime &date_time, LogLevel level, const std::string &message);
 
-  private:
-    // 時刻取得
+    /// @brief 時刻取得
+    /// @return 時刻
     const DateTime &getDateTime() const;
-    // ログレベル取得
+
+    /// @brief ログレベル取得
+    /// @return ログレベル
     LogLevel getLevel() const;
-    // ログメッセージ取得
+
+    /// @brief ログメッセージ取得
+    /// @return ログ文字列
     const std::string &getMessage() const;
 
-    // 時刻
+  private:
+    /// @brief 時刻
     DateTime date_time_;
-    // ログレベル
+
+    /// @brief ログレベル
     LogLevel level_;
-    // ログメッセージ
+
+    /// @brief ログメッセージ
     std::string message_;
 };

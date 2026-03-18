@@ -11,6 +11,11 @@ enum class LogLevel {
     kInfo
 };
 
+/// @brief 文字列をEnumに変換
+/// @param level 文字列
+/// @return ログレベルEnumクラス
+LogLevel fromString(const std::string &level);
+
 /// @brief ログレベルの文字列を取得
 /// @param level ログレベル
 /// @return ログレベル文字列
